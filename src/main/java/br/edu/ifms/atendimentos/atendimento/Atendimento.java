@@ -1,6 +1,7 @@
-package br.edu.ifms.atendimentos.servico;
+package br.edu.ifms.atendimentos.atendimento;
 
-import br.edu.ifms.atendimentos.atendimento.Atendimento;
+import br.edu.ifms.atendimentos.empresa.Empresa;
+import br.edu.ifms.atendimentos.usuario.Usuario;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -18,16 +19,20 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor // cria construtores com todos os atributos
 @NoArgsConstructor // cria construtor sem parâmetros
 @Builder // padrão de projeto para construção de objetos
-public class Servico {
+public class Atendimento {
 
     @Id
-    @GeneratedValue(generator = "servico_sequence")
+    @GeneratedValue(generator = "atendimento_sequence")
     private Long id;
-    private String nome;
     @ManyToOne
-    @JoinColumn(name = "atendimento_id",
+    @JoinColumn(name = "empresa_id",
             insertable = false,
             updatable = false)
-    private Atendimento atendimento;
-   
+    private Empresa empresa;
+    @ManyToOne
+    @JoinColumn(name = "usuario_id",
+            insertable = false,
+            updatable = false)
+    private Usuario usuario;
+
 }

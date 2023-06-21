@@ -16,8 +16,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor // cria construtor sem parâmetros
 @Builder // padrão de projeto para construção de objetos
 public class Usuario {
-	@Id
-    @GeneratedValue
+
+    @Id
+    @GeneratedValue(generator = "usuario_sequence")
     private Long id;
     private String nome;
     private String senha;

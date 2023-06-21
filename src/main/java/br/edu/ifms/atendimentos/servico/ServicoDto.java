@@ -1,7 +1,6 @@
 package br.edu.ifms.atendimentos.servico;
 
-import br.edu.ifms.atendimentos.empresa.EmpresaDto;
-import br.edu.ifms.atendimentos.usuario.UsuarioDto;
+import br.edu.ifms.atendimentos.atendimento.AtendimentoDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
@@ -15,7 +14,6 @@ import lombok.NoArgsConstructor;
 @Builder
 public class ServicoDto {
 
-    private String prioridade;
-    private EmpresaDto empresaDto;
-    private UsuarioDto usuarioDto;
+    private String nome;
+    private AtendimentoDto atendimentoDto;
 }

@@ -1,6 +1,8 @@
 package br.edu.ifms.atendimentos.empresa;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,7 +16,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor // cria construtor sem parâmetros
 @Builder // padrão de projeto para construção de objetos
 public class Empresa {
-    
+    @Id
+    @GeneratedValue(generator = "empresa_seq")
     private Integer id;
     private String nome;
     private String cnpj;
