@@ -15,5 +15,5 @@ import lombok.NoArgsConstructor;
 public class ServicoDto {
 
     private String nome;
-    private AtendimentoDto atendimentoDto;
+    private AtendimentoDto atendimento;
 }

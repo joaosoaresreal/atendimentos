@@ -18,11 +18,10 @@ import lombok.NoArgsConstructor;
 public class Usuario {
 
     @Id
-    @GeneratedValue(generator = "usuario_sequence")
+    @GeneratedValue(generator = "usuario_seq")
     private Long id;
     private String nome;
     private String senha;
-    private String endereco;
     private String email;
     private String telefone;
 }

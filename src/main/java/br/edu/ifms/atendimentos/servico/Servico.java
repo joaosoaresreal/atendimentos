@@ -21,7 +21,7 @@ import lombok.NoArgsConstructor;
 public class Servico {
 
     @Id
-    @GeneratedValue(generator = "servico_sequence")
+    @GeneratedValue(generator = "servico_seq")
     private Long id;
     private String nome;
     @ManyToOne
