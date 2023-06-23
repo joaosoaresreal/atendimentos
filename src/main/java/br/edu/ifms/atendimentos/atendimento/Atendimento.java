@@ -23,7 +23,7 @@ import lombok.NoArgsConstructor;
 public class Atendimento {
 
     @Id
-    @GeneratedValue(generator = "atendimento_sequence")
+    @GeneratedValue(generator = "atendimento_seq")
     private Long id;
     private int prioridade;
     private LocalDateTime emissao;

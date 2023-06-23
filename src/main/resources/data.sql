@@ -11,3 +11,14 @@ INSERT INTO usuario (id, nome, senha, email, telefone) VALUES
 
 ALTER SEQUENCE usuario_seq RESTART WITH 3;
 
+INSERT INTO atendimento(id, prioridade, emissao, empresa_id, usuario_id) VALUES 
+    (1, 1, '2023-06-22T21:44:00', 2, 2),
+    (2, 3, '2023-06-22T21:45:02', 1, 1);
+
+ALTER SEQUENCE atendimento_seq RESTART WITH 3;
+
+INSERT INTO servico(id, nome, atendimento_id) VALUES 
+    (1, 'Testar Sistema', 1),
+    (2, 'Envio do XML', 2);
+
+ALTER SEQUENCE servico_seq RESTART WITH 3;
