@@ -1,6 +1,7 @@
 package br.edu.ifms.atendimentos.atendimento;
 
 import br.edu.ifms.atendimentos.empresa.Empresa;
+import br.edu.ifms.atendimentos.servico.Servico;
 import br.edu.ifms.atendimentos.usuario.Usuario;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -26,6 +27,7 @@ public class Atendimento {
     @GeneratedValue(generator = "atendimento_seq")
     private Long id;
     private int prioridade;
+    private String descricao;
     private LocalDateTime emissao;
     @ManyToOne
     @JoinColumn(name = "empresa_id",
@@ -37,5 +39,10 @@ public class Atendimento {
             insertable = false,
             updatable = false)
     private Usuario usuario;
+    @ManyToOne
+    @JoinColumn(name = "servico_id",
+            insertable = false,
+            updatable = false)
+    private Servico servico;
 
 }

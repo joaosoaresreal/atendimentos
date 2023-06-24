@@ -1,6 +1,5 @@
 package br.edu.ifms.atendimentos.servico;
 
-import br.edu.ifms.atendimentos.atendimento.AtendimentoDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
@@ -15,5 +14,4 @@ import lombok.NoArgsConstructor;
 public class ServicoDto {
 
     private String nome;
-    private AtendimentoDto atendimento;
 }

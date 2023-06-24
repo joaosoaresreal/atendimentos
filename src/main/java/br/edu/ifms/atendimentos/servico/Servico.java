@@ -1,11 +1,8 @@
 package br.edu.ifms.atendimentos.servico;
 
-import br.edu.ifms.atendimentos.atendimento.Atendimento;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -24,10 +21,5 @@ public class Servico {
     @GeneratedValue(generator = "servico_seq")
     private Long id;
     private String nome;
-    @ManyToOne
-    @JoinColumn(name = "atendimento_id",
-            insertable = false,
-            updatable = false)
-    private Atendimento atendimento;
    
 }

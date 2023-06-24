@@ -1,12 +1,17 @@
 package br.edu.ifms.atendimentos.atendimento;
 
+import br.edu.ifms.atendimentos.empresa.EmpresaMapper;
+import br.edu.ifms.atendimentos.servico.ServicoMapper;
+import br.edu.ifms.atendimentos.usuario.UsuarioMapper;
 import java.util.List;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
 import org.mapstruct.factory.Mappers;
 
-@Mapper
+@Mapper(
+        uses = {EmpresaMapper.class, UsuarioMapper.class, ServicoMapper.class}
+)
 public interface AtendimentoMapper {
     public static final AtendimentoMapper INSTANCE = Mappers.getMapper(AtendimentoMapper.class);
     
